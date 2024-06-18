@@ -288,7 +288,13 @@ body {
 .grid-list {
   display: grid;
   gap: 30px;
+  justify-content: center; /* Center items horizontally */
+  list-style-type: none; /* Removes default list styles */
+  padding: 0;
 }
+
+
+
 
 .category-card,
 .stats-card { background-color: hsla(var(--color), 0.1); }
@@ -973,11 +979,19 @@ body {
     width: 100%;
     margin-inline: auto;
   }
-
-  .grid-list { grid-template-columns: 1fr 1fr; }
-
-  :is(.course, .blog) .grid-list { grid-template-columns: 1fr; }
-
+  ::ng-deep .container .small-container {
+    margin-left: auto; /* Move the small-container to the right within .container */
+  }
+  
+  .grid-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns layout for grid-list */
+    gap: 30px; /* Gap between grid items */
+  }
+  
+  :is(.course, .blog) .grid-list {
+    grid-template-columns: 1fr; /* Single column layout for specific cases */
+  }
 
 
   /**
@@ -1223,7 +1237,7 @@ body {
    */
 
   .video-banner {
-    max-width: 75%;
+    max-width: 90%;
     margin-inline: auto;
   }
 
