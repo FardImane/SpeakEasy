@@ -24,7 +24,7 @@
     flex: 1;
     display: flex;
     flex-direction: row;
-    max-width: 50%;
+    max-width: 90%;
     position: relative;
 }
 
@@ -43,10 +43,12 @@
 
 .app__gallery-images_card {
     position: relative;
-    min-width: 301px;
-    height: 447px;
+    min-width: 30%;
+    height: 550px;
     margin-right: 2rem;
-}
+    overflow: hidden;
+    border-radius: 10px;
+  }   
 
 .gallery__image-icon {
     position: absolute;
@@ -142,4 +144,83 @@
         min-width: 240px;
         height: 320px;
     }
+@media screen and (max-width: 1150px) {
+    .app__gallery-images_card {
+          min-width: 45%;
+        }
+      }
+      
+@media screen and (max-width: 650px) {
+    .app__gallery-images_card {
+          min-width: 90%;
+        }
+      }
+      
 }
+
+
+/* Centrer le titre Accomplissement */
+.centered-gallery-title {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+  
+  .centered-gallery-title h1 {
+    font-size: 3rem;
+  }
+  
+  /* Supprime l'opacité au hover, et ajoute un zoom */
+  .app__gallery-images_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .app__gallery-images_card:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* On ne veut plus d’icône Instagram */
+  .gallery__image-icon {
+    display: none !important;
+  }
+  .column-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-black);
+    padding: 5rem 2rem;
+  }
+  
+  .app__gallery-title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  
+  /* Agrandir les cartes d’images */
+  .app__gallery-images_card {
+    position: relative;
+    min-width: 400px;
+    height: 550px;
+    margin-right: 2rem;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Zoom sur l’image au hover */
+  .app__gallery-images_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .app__gallery-images_card:hover img {
+    transform: scale(1.08);
+  }
+  

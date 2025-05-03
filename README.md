@@ -1,23 +1,53 @@
-# Restaurant Landing Page
-### [Live Site](https://gericht-restaurant.com/)
+# SpeakEasy – Page d’accueil inclusive
 
-![Restaurant Landing Page](https://i.ibb.co/5jxBKpw/image.png)
+### 🚀 [Site en ligne](https://votre-lien-speakeasy.com)
 
-### [🌟 Become a top 1% Next.js 13 developer in only one course](https://jsmastery.pro/next13)
-### [🚀 Land your dream programming job in 6 months](https://jsmastery.pro/masterclass)
+![SpeakEasy Landing Page](https://startup-speak-easy.vercel.app/)
 
-## Stay up to date with new projects
-New major projects coming soon, subscribe to the mailing list to stay up to date https://resource.jsmasterypro.com/newsletter
+---
 
-## Introduction
-This is a code repository for the corresponding video tutorial. In this video, we're going to build a Modern UI/UX Restaurant Landing Page Website
+## 🧠 À propos
 
-You might be wondering, what are the prerequisites for building such an amazing website? Don't worry, this course is completely beginner-friendly! We're going to start easy and them move to more complex topics. Every step of the way will be explained. Alongside building the website, you'll learn:
+**SpeakEasy** est une landing page moderne et inclusive, conçue pour valoriser l’accessibilité, la langue des signes, et la communication entre personnes entendantes et malentendantes grâce à la technologie.
 
-- React Functional components and their reusability
-- React file and folder structure
-- Fundamental CSS properties to master flex & grid
-- Fundamentals of the CSS BEM Model
-- From soft and pleasant animations to complex gradients
-- Perfectly placed media queries for satisfactory responsiveness covering almost devices
-- And at the end you'll learn how to deploy your websites to extremely fast servers and give them a custom domain name.
+Ce projet met en avant les valeurs de SpeakEasy : inclusion, innovation, accessibilité et bienveillance.
+
+---
+
+## 💻 Technologies utilisées
+
+- **React.js** – Composants fonctionnels
+- **CSS Flexbox & Grid** – Design responsive fluide
+- **Structure BEM** – Meilleure lisibilité et organisation du CSS
+- **Animations CSS** – Transitions douces et interactions modernes
+- **Déploiement optimisé** – Serveur rapide + domaine personnalisé
+
+---
+
+## 🏁 Objectifs pédagogiques
+
+Ce projet peut aussi servir de base pour :
+
+- Apprendre à structurer une interface claire et inclusive
+- S’initier à l’accessibilité web
+- Intégrer des médias dynamiques (vidéo avatar, animations)
+- Déployer un site vitrine professionnel
+
+---
+
+## 📬 Contact
+
+📧 contact@speakeasy.fr  
+🔗 [LinkedIn Imane FARD](https://www.linkedin.com/in/imane-fard)
+
+---
+
+## 📌 À venir
+
+- Intégration d’un formulaire de contact natif
+- Démo vidéo interactive avec avatar en langue des signes
+- Version multilingue (FR/EN)
+
+---
+
+> “La meilleure façon de se comprendre est de tendre la main à ceux qu’on n’entend pas toujours.” – L'équipe SpeakEasy

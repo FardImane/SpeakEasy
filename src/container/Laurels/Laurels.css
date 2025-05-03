@@ -40,3 +40,34 @@
         margin: 1rem 0;
     }
 }
+
+
+  .app__laurels-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .app__laurels-image img {
+    width: 100vw;           /* très large */
+    height: 90vh;          /* très haut */
+    object-fit: contain;   /* ne rogne rien */
+    display: block;
+  }
+  
+
+  .app__laurels-image img {
+    transform: scale(1.1); /* agrandir visuellement */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .app__laurels-image img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+  }

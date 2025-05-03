@@ -1,44 +1,67 @@
 import React from 'react';
-
-import { SubHeading, MenuItem } from '../../components';
-import { data, images } from '../../constants';
+import { SubHeading } from '../../components';
+import { data } from '../../constants';
 import './SpecialMenu.css';
 
-const SpecialMenu = () => (
-  <div className="app__specialMenu flex__center section__padding" id="menu">
-    <div className="app__specialMenu-title">
-      <SubHeading title="Menu that fits your palatte" />
-      <h1 className="headtext__cormorant">Today&apos;s Special</h1>
-    </div>
+const icons = [
+  `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M16 1H8C6.34 1 5 2.34 5 4v16c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V4c0-1.66-1.34-3-3-3z"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>`,
+  `<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>`
+];
 
-    <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">Wine & Beer</p>
-        <div className="app__specialMenu_menu_items">
-          {data.wines.map((wine, index) => (
-            <MenuItem key={wine.title + index} title={wine.title} price={wine.price} tags={wine.tags} />
-          ))}
-        </div>
+const SpecialMenu = () => {
+  return (
+    <section id="menu" className="app__specialMenu section__padding">
+      <div className="app__specialMenu-title">
+        <SubHeading title="Des Offres Pensées Pour Vous" />
+        <h1 className="headtext__cormorant">Choisissez votre formule</h1>
       </div>
 
-      <div className="app__specialMenu-menu_img">
-        <img src={images.menu} alt="menu__img" />
-      </div>
+      <div className="app__specialMenu-menu_gallery_cards">
+        {data.cocktails.map((offer, index) => {
+          const className =
+            'card card--' +
+            offer.title
+              .toLowerCase()
+              .normalize('NFD')
+              .replace(/[̀-ͯ]/g, '')
+              .replace(/[^a-z]/g, '');
 
-      <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">Cocktails</p>
-        <div className="app__specialMenu_menu_items">
-          {data.cocktails.map((cocktail, index) => (
-            <MenuItem key={cocktail.title + index} title={cocktail.title} price={cocktail.price} tags={cocktail.tags} />
-          ))}
-        </div>
+          return (
+            <div key={index} className={className}>
+              <img src={offer.image} alt={offer.title} className="card__image" />
+              <div className="card__content">
+                <h2 className="card__title">{offer.title}</h2>
+                <h4 className="card__subtitle">{offer.price}</h4>
+                <div className="card__features">
+                  {offer.tags.split('|').map((tag, i) => (
+                    <div className="card__feature" key={i}>
+                      <span
+                        className="card__icon"
+                        dangerouslySetInnerHTML={{ __html: icons[i % icons.length] }}
+                      />
+                      <p>{tag.trim()}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="card__hovertext">
+                  {offer.title === 'FREEMIUM' && 'Essayez sans risque, 100% gratuit'}
+                  {offer.title === 'PREMIUM' && 'Passez à la vitesse supérieure'}
+                  {offer.title === 'LICENSE & FINANCEMENT' &&
+                    'Pensé pour les pros et les institutions'}
+                </div>
+                <button className="custom__button">
+                  {offer.title === 'FREEMIUM' && 'Commencer gratuitement'}
+                  {offer.title === 'PREMIUM' && 'Passer à Premium'}
+                  {offer.title === 'LICENSE & FINANCEMENT' && 'Nous contacter'}
+                </button>
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </div>
-
-    <div style={{ marginTop: 15 }}>
-      <button type="button" className="custom__button">View More</button>
-    </div>
-  </div>
-);
+    </section>
+  );
+};
 
 export default SpecialMenu;

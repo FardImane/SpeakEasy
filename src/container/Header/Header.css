@@ -42,3 +42,40 @@
         line-height: 70px;
     }
 }
+
+.framed-image {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+  }
+  
+  /* Coin en haut à gauche */
+  .framed-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    background-color: #D8BA72; /* ajustable */
+    z-index: -1;
+  }
+  
+  /* Coin en bas à droite */
+  .framed-image::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background-color: #000000; /* ajustable */
+    z-index: -1;
+  }
+  
+  .framed-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  

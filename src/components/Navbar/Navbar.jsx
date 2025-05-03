@@ -6,34 +6,68 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
+  const links = ['home', 'about', 'menu', 'awards', 'contact'];
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.gericht} alt="app__logo" />
+        <img src={images.SpeakEasy} alt="app__logo" />
+        <div>
+          <h5 className="app__navbar-logo-text">SpeakEasy</h5>
+        </div>
       </div>
+
       <ul className="app__navbar-links">
-        <li className="p__opensans"><a href="#home">Home</a></li>
-        <li className="p__opensans"><a href="#about">About</a></li>
-        <li className="p__opensans"><a href="#menu">Menu</a></li>
-        <li className="p__opensans"><a href="#awards">Awards</a></li>
-        <li className="p__opensans"><a href="#contact">Contact</a></li>
+        {links.map((link) => (
+          <li className="p__opensans" key={link}>
+            <a href={`#${link}`}>
+              {link.charAt(0).toUpperCase() + link.slice(1)}
+            </a>
+          </li>
+        ))}
       </ul>
-      <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">Log In / Registration</a>
-        <div />
-        <a href="/" className="p__opensans">Book Table</a>
-      </div>
+
       <div className="app__navbar-smallscreen">
-        <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} />
+        <GiHamburgerMenu
+          color="#fff"
+          fontSize={27}
+          onClick={() => setToggleMenu(true)}
+          className="menu-icon"
+        />
+
         {toggleMenu && (
-          <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
-            <MdOutlineRestaurantMenu fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
+          <div className="app__navbar-smallscreen_overlay animate-slideDown flex__center">
+            <MdOutlineRestaurantMenu
+              fontSize={27}
+              className="overlay__close"
+              onClick={() => setToggleMenu(false)}
+            />
             <ul className="app__navbar-smallscreen_links">
-              <li><a href="#home" onClick={() => setToggleMenu(false)}>Home</a></li>
-              <li><a href="#about" onClick={() => setToggleMenu(false)}>About</a></li>
-              <li><a href="#menu" onClick={() => setToggleMenu(false)}>Menu</a></li>
-              <li><a href="#awards" onClick={() => setToggleMenu(false)}>Awards</a></li>
-              <li><a href="#contact" onClick={() => setToggleMenu(false)}>Contact</a></li>
+              <li>
+                <a href="#home" onClick={() => setToggleMenu(false)}>
+                  <span>01.</span> Accueil
+                </a>
+              </li>
+              <li>
+                <a href="#about" onClick={() => setToggleMenu(false)}>
+                  <span>02.</span> À propos
+                </a>
+              </li>
+              <li>
+                <a href="#menu" onClick={() => setToggleMenu(false)}>
+                  <span>03.</span> Découvrir
+                </a>
+              </li>
+              <li>
+                <a href="#awards" onClick={() => setToggleMenu(false)}>
+                  <span>04.</span> Récompenses
+                </a>
+              </li>
+              <li>
+                <a href="#contact" onClick={() => setToggleMenu(false)}>
+                  <span>05.</span> Contact
+                </a>
+              </li>
             </ul>
           </div>
         )}
