@@ -1,8 +1,23 @@
 {
+    "version": 2,
     "build": {
       "env": {
-        "NODE_OPTIONS": "--openssl-legacy-provider"
+        "NODE_OPTIONS": "--openssl-legacy-provider",
+        "MJ_API_KEY": "a55e1fb3537b358979fbb51d67b774bf",
+        "MJ_API_SECRET": "7c85f15804c43a19284e2618bd315c4d"
       }
-    }
+    },
+    "builds": [
+      {
+        "src": "api/newsletter.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/newsletter/subscribe",
+        "dest": "/api/newsletter.js"
+      }
+    ]
   }
   

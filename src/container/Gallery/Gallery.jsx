@@ -7,7 +7,7 @@ import './Gallery.css';
 
 const Gallery = () => {
   const scrollRef = useRef(null);
-  const directionRef = useRef('right'); // pour alterner gauche ↔ droite
+  const directionRef = useRef('right');
 
   const scroll = (direction) => {
     const { current } = scrollRef;
@@ -16,7 +16,6 @@ const Gallery = () => {
     }
   };
 
-  // ⏱️ Défilement automatique
   useEffect(() => {
     const interval = setInterval(() => {
       const current = scrollRef.current;
@@ -30,13 +29,13 @@ const Gallery = () => {
       }
 
       scroll(directionRef.current);
-    }, 800); // toutes les 3 secondes
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="app__gallery column-layout">
+    <div className="app__gallery">
       <div className="app__gallery-title">
         <SubHeading title="Une vitrine de nos avancées" />
         <h1 className="headtext__cormorant">Accomplissement</h1>
@@ -46,7 +45,7 @@ const Gallery = () => {
         <div className="app__gallery-images_container" ref={scrollRef}>
           {[images.gallery01, images.gallery02, images.gallery03, images.gallery04, images.gallery05].map((image, index) => (
             <div className="app__gallery-images_card" key={`gallery_image-${index + 1}`}>
-              <img src={image} alt="gallery_image" />
+              <img src={image} alt={`gallery ${index + 1}`} />
             </div>
           ))}
         </div>

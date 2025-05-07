@@ -1,11 +1,15 @@
 {
-  "name": "SpeakEasy",
+  "name": "speakeasy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.2",
     "postcss-safe-parser": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -21,7 +25,10 @@
     "lint:fix": "eslint src --ext .js,.jsx --fix"
   },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -45,5 +52,10 @@
   "engines": {
     "node": ">=18.0.0",
     "yarn": ">=1.22.0"
-  }
+  },
+  "description": "### 🚀 [Site en ligne](https://votre-lien-speakeasy.com)",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

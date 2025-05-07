@@ -40,22 +40,27 @@ const Footer = () => (
 
         <p className="p__opensans">
           <a href="https://www.linkedin.com/in/imane-fard-a45961218/" target="_blank" rel="noopener noreferrer">
-            Imane FARD – General Manager <FaLinkedin style={{ marginLeft: 8 }} />
+            Imane FARD  <FaLinkedin style={{ marginLeft: 8 }} />
           </a>
         </p>
         <p className="p__opensans">
           <a href="https://www.linkedin.com/in/kaoutar-belahsen/" target="_blank" rel="noopener noreferrer">
-            Kaoutar BELAHSEN – Technical Expert <FaLinkedin style={{ marginLeft: 8 }} />
+            Kaoutar BELAHSEN  <FaLinkedin style={{ marginLeft: 8 }} />
           </a>
         </p>
         <p className="p__opensans">
           <a href="https://www.linkedin.com/in/anissa-rasoanirina-6b5198246/" target="_blank" rel="noopener noreferrer">
-            RASOANIRINA Anissa – Operations Manager <FaLinkedin style={{ marginLeft: 8 }} />
+            RASOANIRINA Anissa <FaLinkedin style={{ marginLeft: 8 }} />
           </a>
         </p>
         <p className="p__opensans">
           <a href="https://www.linkedin.com/in/sarah-mesroua/" target="_blank" rel="noopener noreferrer">
-            Sarah MESROUA – Technical Expert <FaLinkedin style={{ marginLeft: 8 }} />
+            Sarah MESROUA  <FaLinkedin style={{ marginLeft: 8 }} />
+          </a>
+        </p>
+        <p className="p__opensans">
+          <a href="https://www.linkedin.com/in/belmadi-ghizlane-256aa11a3/" target="_blank" rel="noopener noreferrer">
+            Ghizlane BELMADI  <FaLinkedin style={{ marginLeft: 8 }} />
           </a>
         </p>
       </div>

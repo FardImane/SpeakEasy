@@ -9,7 +9,7 @@ export const cocktails = [
   },
   {
     title: 'PREMIUM',
-    price: 'À partir de 12€/mois',
+    price: 'Paiement mensuel',
     tags: 'Accès complet | Outils avancés | Expérience optimisée',
     image: images.premium,
   },
