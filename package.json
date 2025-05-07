@@ -27,13 +27,17 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "typescript": "^5.4.5",
+    "@babel/plugin-syntax-flow": "^7.27.1",
+    "@babel/plugin-transform-react-jsx": "^7.27.1",
+    "@testing-library/dom": "^10.4.0",
+    "eslint": "^9.26.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2"
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "postcss": "^8.5.3",
+    "typescript": "^5.8.3"
   },
   "eslintConfig": {
     "extends": [
