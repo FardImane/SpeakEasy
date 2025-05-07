@@ -21,8 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/index.html",
-        "continue": true
+        "dest": "/index.html"
       }
     ],
     "env": {
