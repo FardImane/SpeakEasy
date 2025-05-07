@@ -26,7 +26,7 @@ const Footer = () => (
         <p className="p__opensans">
           "La meilleure façon de se comprendre est de tendre la main à ceux qu’on n’entend pas toujours."
         </p>
-        <img src={images.spoon} className="spoon__img" style={{ marginTop: 15 }} />
+        <img src={images.spoon} alt="Illustration cuillère" className="spoon__img" style={{ marginTop: 15 }} />
         <div className="app__footer-links_icons">
           <a href="https://www.facebook.com/SpeakEasy" target="_blank" rel="noopener noreferrer"><FiFacebook /></a>
           <a href="https://twitter.com/SpeakEasy" target="_blank" rel="noopener noreferrer"><FiTwitter /></a>
