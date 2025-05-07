@@ -16,6 +16,7 @@
     "routes": [
       {
         "src": "/api/newsletter/subscribe",
+        "methods": ["POST"],
         "dest": "/api/newsletter.js"
       },
       {
@@ -25,8 +26,8 @@
     ],
     "env": {
       "NODE_OPTIONS": "--openssl-legacy-provider",
-      "MJ_API_KEY": "a55e1fb3537b358979fbb51d67b774bf",
-      "MJ_API_SECRET": "7c85f15804c43a19284e2618bd315c4d"
+      "MJ_API_KEY": "@mj_api_key",
+      "MJ_API_SECRET": "@mj_api_secret"
     }
   }
   
