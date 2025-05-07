@@ -15,7 +15,7 @@ const Newsletter = () => {
     setStatus('sending');
 
     try {
-      const response = await fetch('http://localhost:5050/api/newsletter/subscribe', {
+      const response = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
