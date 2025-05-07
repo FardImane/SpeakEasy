@@ -2,6 +2,15 @@
   "name": "speakeasy",
   "version": "0.1.0",
   "private": true,
+  "description": "### 🚀 [Site en ligne](https://votre-lien-speakeasy.com)",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "CI=false NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint:fix": "eslint src --ext .js,.jsx --fix"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -17,17 +26,20 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^1.0.1"
   },
-  "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "CI='' NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint:fix": "eslint src --ext .js,.jsx --fix"
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "typescript": "^5.4.5",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^4.6.2"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "airbnb"
     ]
   },
   "browserslist": {
@@ -42,19 +54,10 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2"
-  },
   "engines": {
     "node": ">=18.0.0",
     "yarn": ">=1.22.0"
   },
-  "description": "### 🚀 [Site en ligne](https://votre-lien-speakeasy.com)",
-  "main": "server.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
