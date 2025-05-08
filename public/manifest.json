@@ -1,9 +1,9 @@
 {
   "short_name": "SpeakEasy",
-  "name": "SpeakEasy - Communication Inclusive",
+  "name": "SpeakEasy: Traduction Inclusive",
   "icons": [
     {
-      "src": "favicon-64x64.png",
+      "src": "favicon.png",
       "sizes": "64x64",
       "type": "image/png"
     },
@@ -18,8 +18,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
-  "theme_color": "#26a7c7",
+  "theme_color": "#000000",
   "background_color": "#ffffff"
 }

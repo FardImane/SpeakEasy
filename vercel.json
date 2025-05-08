@@ -20,12 +20,21 @@
         "dest": "/api/newsletter.js"
       },
       {
+        "src": "/static/(.*)",
+        "headers": {
+          "cache-control": "public, max-age=31536000, immutable"
+        },
+        "dest": "/static/$1"
+      },
+      {
         "src": "/(.*)",
         "dest": "/index.html"
       }
     ],
     "env": {
-      "NODE_OPTIONS": "--openssl-legacy-provider"
+      "NODE_OPTIONS": "--openssl-legacy-provider",
+      "MJ_API_KEY": "@mj_api_key",
+      "MJ_API_SECRET": "@mj_api_secret"
     }
   }
   
