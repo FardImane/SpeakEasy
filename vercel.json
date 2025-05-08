@@ -1,14 +1,29 @@
 {
     "version": 2,
-    "rewrites": [
+    "builds": [
       {
-        "source": "/server/(.*)",
-        "destination": "/server/$1"
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "build" }
       },
       {
-        "source": "/(.*)",
-        "destination": "/index.html"
+        "src": "server/server.js",
+        "use": "@vercel/node"
       }
-    ]
+    ],
+    "routes": [
+      {
+        "src": "/api/newsletter",
+        "methods": ["POST"],
+        "dest": "server/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ],
+    "env": {
+      "NODE_OPTIONS": "--openssl-legacy-provider"
+    }
   }
   

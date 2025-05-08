@@ -9,7 +9,7 @@ const mailjetClient = mailjet.apiConnect(
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
-    return res.status(405).end('Method Not Allowed');
+    return res.status(405).json({ message: 'Méthode non autorisée' });
   }
 
   const { email } = req.body;
@@ -18,11 +18,10 @@ module.exports = async (req, res) => {
     return res.status(400).json({ message: 'Email invalide' });
   }
 
-  // Lit le fichier HTML du dossier `public`
-  const filePath = path.join(__dirname, 'template.html');
-  const htmlTemplate = fs.readFileSync(filePath, 'utf8');
-
   try {
+    const filePath = path.join(process.cwd(), 'public', 'template.html');
+    const htmlTemplate = fs.readFileSync(filePath, 'utf8');
+
     const request = await mailjetClient
       .post('send', { version: 'v3.1' })
       .request({
@@ -32,19 +31,14 @@ module.exports = async (req, res) => {
               Email: 'imanefard.2002@gmail.com',
               Name: 'SpeakEasy',
             },
-            To: [
-              {
-                Email: email,
-                Name: 'Utilisateur',
-              },
-            ],
+            To: [{ Email: email, Name: 'Utilisateur' }],
             Subject: 'Bienvenue chez SpeakEasy !',
             HTMLPart: htmlTemplate,
           },
         ],
       });
 
-    console.log('✉️ Email envoyé à :', request.body.Messages[0].To[0].Email);
+    console.log('✅ Email envoyé à :', email);
     return res.status(200).json({ message: 'Inscription réussie' });
   } catch (err) {
     console.error('❌ Erreur Mailjet :', err.statusCode, err.message);
