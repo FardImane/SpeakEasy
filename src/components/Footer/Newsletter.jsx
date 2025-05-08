@@ -67,11 +67,6 @@ const Newsletter = () => {
             🎉 Bienvenue chez SpeakEasy ! Un email vous a été envoyé.
           </p>
         )}
-        {status === 'error' && (
-          <p className="error-message">
-            ❌ Une erreur est survenue. Merci de réessayer.
-          </p>
-        )}
       </div>
     </div>
   );
