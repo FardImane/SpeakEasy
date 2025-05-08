@@ -2,15 +2,13 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/newsletter.js",
-        "use": "@vercel/node"
-      },
-      {
         "src": "package.json",
         "use": "@vercel/static-build",
-        "config": {
-          "distDir": "build"
-        }
+        "config": { "distDir": "build" }
+      },
+      {
+        "src": "api/newsletter.js",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
@@ -18,11 +16,6 @@
         "src": "/api/newsletter/subscribe",
         "methods": ["POST"],
         "dest": "/api/newsletter.js"
-      },
-      {
-        "src": "/(favicon\\.ico|manifest\\.json|logo.*\\.png)",
-        "headers": { "Cache-Control": "public,max-age=31536000,immutable" },
-        "dest": "/$1"
       },
       {
         "src": "/(.*)",
