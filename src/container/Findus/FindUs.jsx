@@ -14,7 +14,7 @@ const FindUs = () => (
           SpeakEasy vous accueille pour construire ensemble un monde plus accessible, plus humain et plus connecté. 
         </p>
         <p className="p__opensans" style={{ marginTop: '1rem' }}>
-          Contactez-nous pour collaborer, tester notre solution ou en savoir plus sur nos actions.
+          Contactez-nous pour collaborer, tester notre solution ou en savoir plus sur nos actions
         </p>
       </div>
       <a

@@ -31,7 +31,7 @@ Ce projet peut aussi servir de base pour :
 - Apprendre à structurer une interface claire et inclusive
 - S’initier à l’accessibilité web
 - Intégrer des médias dynamiques (vidéo avatar, animations)
-- Déployer un site vitrine professionnel
+- Déployer un site professionnel
 
 ---
 
