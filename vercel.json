@@ -30,9 +30,7 @@
       }
     ],
     "env": {
-      "NODE_OPTIONS": "--openssl-legacy-provider",
-      "MJ_API_KEY": "@mj_api_key",
-      "MJ_API_SECRET": "@mj_api_secret"
+      "NODE_OPTIONS": "--openssl-legacy-provider"
     }
   }
   
