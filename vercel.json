@@ -4,7 +4,9 @@
       {
         "src": "package.json",
         "use": "@vercel/static-build",
-        "config": { "distDir": "build" }
+        "config": {
+          "distDir": "build"
+        }
       },
       {
         "src": "server/server.js",
@@ -15,7 +17,27 @@
       {
         "src": "/api/newsletter",
         "methods": ["POST"],
-        "dest": "server/server.js"
+        "dest": "/server/server.js"
+      },
+      {
+        "src": "/manifest.json",
+        "dest": "/manifest.json"
+      },
+      {
+        "src": "/favicon.ico",
+        "dest": "/favicon.ico"
+      },
+      {
+        "src": "/logo192.png",
+        "dest": "/logo192.png"
+      },
+      {
+        "src": "/logo512.png",
+        "dest": "/logo512.png"
+      },
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
       },
       {
         "src": "/(.*)",
@@ -26,4 +48,3 @@
       "NODE_OPTIONS": "--openssl-legacy-provider"
     }
   }
-  
