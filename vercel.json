@@ -1,18 +1,7 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "api/newsletter.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "build"
-        }
-      }
-    ],
+    "buildCommand": "yarn build",
+    "outputDirectory": "build",
     "routes": [
       {
         "src": "/api/newsletter/subscribe",
