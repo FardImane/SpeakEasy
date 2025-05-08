@@ -1,8 +1,18 @@
 {
     "version": 2,
-    "buildCommand": "yarn build",
-    "outputDirectory": "build",
-    "public": "public",
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      },
+      {
+        "src": "api/newsletter.js",
+        "use": "@vercel/node"
+      }
+    ],
     "routes": [
       {
         "src": "/api/newsletter/subscribe",
@@ -10,12 +20,30 @@
         "dest": "/api/newsletter.js"
       },
       {
+        "src": "/favicon.ico",
+        "dest": "/favicon.ico"
+      },
+      {
+        "src": "/manifest.json",
+        "dest": "/manifest.json"
+      },
+      {
+        "src": "/logo192.png",
+        "dest": "/logo192.png"
+      },
+      {
+        "src": "/logo512.png",
+        "dest": "/logo512.png"
+      },
+      {
         "src": "/(.*)",
         "dest": "/index.html"
       }
     ],
     "env": {
-      "NODE_OPTIONS": "--openssl-legacy-provider"
+      "NODE_OPTIONS": "--openssl-legacy-provider",
+      "MJ_API_KEY": "@mj_api_key",
+      "MJ_API_SECRET": "@mj_api_secret"
     }
   }
   
