@@ -19,7 +19,7 @@ module.exports = async (req, res) => {
   }
 
   // Lit le fichier HTML du dossier `public`
-  const filePath = path.join(process.cwd(), 'public', 'template.html');
+  const filePath = path.join(__dirname, 'template.html');
   const htmlTemplate = fs.readFileSync(filePath, 'utf8');
 
   try {
