@@ -1,10 +1,12 @@
 {
   "short_name": "SpeakEasy",
   "name": "SpeakEasy App",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#26a7c7",
   "background_color": "#ffffff",
+  "orientation": "portrait",
+  "lang": "fr-FR",
   "icons": [
     {
       "src": "/favicon.png",
