@@ -7,25 +7,20 @@
         "config": {
           "distDir": "build"
         }
-      },
-      {
-        "src": "api/newsletter.js",
-        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/newsletter/subscribe",
-        "methods": ["POST"],
-        "dest": "/api/newsletter.js"
-      },
-      {
-        "src": "/favicon.ico",
-        "dest": "/favicon.ico"
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
       },
       {
         "src": "/manifest.json",
         "dest": "/manifest.json"
+      },
+      {
+        "src": "/favicon.ico",
+        "dest": "/favicon.ico"
       },
       {
         "src": "/logo192.png",
@@ -39,9 +34,6 @@
         "src": "/(.*)",
         "dest": "/index.html"
       }
-    ],
-    "env": {
-      "NODE_OPTIONS": "--openssl-legacy-provider"
-    }
+    ]
   }
   
