@@ -20,13 +20,6 @@
         "dest": "/api/newsletter.js"
       },
       {
-        "src": "/static/(.*)",
-        "headers": {
-          "cache-control": "public, max-age=31536000, immutable"
-        },
-        "dest": "/static/$1"
-      },
-      {
         "src": "/(.*)",
         "dest": "/index.html"
       }
