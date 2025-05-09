@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mailjet = require('node-mailjet');
 const fs = require('fs');
 const path = require('path');
